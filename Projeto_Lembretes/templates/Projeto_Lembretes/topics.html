@@ -1,0 +1,14 @@
+{% extends "Projeto_Lembretes/base.html" %}
+
+{% block content %}
+    Tópicos:
+    <ul>
+        {% for topic in topics %}
+            <li>{{topic}}</li>
+        {% empty %}
+        <li>
+            Nao há topicos adicionados
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
