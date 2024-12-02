@@ -1,0 +1,10 @@
+{% extends "Projeto_Lembretes/base.html" %}
+
+{% block content %}
+    <p>Adicione um topico novo: </p>
+    <form action="{% url 'new_topic' %}" method='post'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button name="submit">Adicionar</button>
+    </form>
+{% endblock content %}
