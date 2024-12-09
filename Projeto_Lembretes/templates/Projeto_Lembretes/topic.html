@@ -13,6 +13,9 @@
             <p>
                 {{entry.text | linebreaks }}
             </p>
+            <p>
+                <a href="{% url 'edit_entry' entry.id %}">Editar anotaçao</a>
+            </p>
         </li>
         {%empty%}
         <li>
